@@ -32,7 +32,7 @@ export default function AdminContentPage() {
       const { data } = await supabase.from('site_content').select('slug, title, content');
       if (data) {
         const map: Record<string, { title: string; content: string }> = {};
-        data.forEach((row) => {
+        data.forEach((row: { slug: string; title: string; content: string | null }) => {
           if (['home', 'about', 'contact'].includes(row.slug)) {
             map[row.slug] = { title: row.title, content: row.content || '' };
           }
