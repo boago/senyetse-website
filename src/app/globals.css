@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --senyetse-gold: #C9A227;
+  --senyetse-earth: #2C1810;
+  --senyetse-cream: #F5F0E6;
+}
+
+body {
+  @apply bg-senyetse-cream text-senyetse-dark antialiased;
+}
+
+/* Subtle traditional pattern background */
+.bg-pattern {
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(201, 162, 39, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 69, 19, 0.06) 0%, transparent 50%),
+    linear-gradient(180deg, #F5F0E6 0%, #EDE6D9 100%);
+}
+
+/* Logo styling - remove white backgrounds and improve clarity */
+.logo-container {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.logo-container img {
+  background: transparent !important;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: high-quality;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Remove white background from logo image using CSS filters */
+.logo-container img {
+  filter: contrast(1.2) brightness(1.1);
+  mix-blend-mode: multiply;
+}
+
+/* Alternative: if multiply doesn't work, try screen blend mode */
+@media (prefers-color-scheme: dark) {
+  .logo-container img {
+    mix-blend-mode: screen;
+    filter: invert(1) contrast(1.2) brightness(1.1);
+  }
+}
