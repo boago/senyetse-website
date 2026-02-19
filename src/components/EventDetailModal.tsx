@@ -38,8 +38,8 @@ export default function EventDetailModal({ event, onClose }: EventDetailModalPro
         .select('id, media_type, url, display_order')
         .eq('event_id', event.id)
         .order('display_order', { ascending: true })
-        .then(({ data }) => {
-          setMedia((data as EventMediaItem[]) || []);
+        .then(({ data }: { data: EventMediaItem[] | null }) => {
+          setMedia(data || []);
         })
         .finally(() => setMediaLoading(false));
     } else {
