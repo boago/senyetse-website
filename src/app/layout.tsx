@@ -22,7 +22,7 @@ export default function RootLayout({
               <div className="logo-container h-16 w-16 flex-shrink-0 flex items-center justify-center overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
-                  src="/logo.jpeg" 
+                  src="/logo.png" 
                   alt="Senyetse Choir Logo" 
                   className="h-full w-full object-contain"
                 />

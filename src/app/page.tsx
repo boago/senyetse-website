@@ -53,7 +53,7 @@ export default async function HomePage() {
             src="/welcome_video.mp4"
             controls
             className="w-full h-full object-contain"
-            poster="/logo.jpeg"
+            poster="/logo.png"
             preload="metadata"
           >
             Your browser does not support the video tag.

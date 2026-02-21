@@ -20,7 +20,7 @@ body {
     linear-gradient(180deg, #F5F0E6 0%, #EDE6D9 100%);
 }
 
-/* Logo styling - remove white backgrounds and improve clarity */
+/* Logo styling - logo.png has transparent background */
 .logo-container {
   background: transparent !important;
   padding: 0 !important;
@@ -29,24 +29,7 @@ body {
 
 .logo-container img {
   background: transparent !important;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  image-rendering: high-quality;
   display: block;
   max-width: 100%;
   max-height: 100%;
-}
-
-/* Remove white background from logo image using CSS filters */
-.logo-container img {
-  filter: contrast(1.2) brightness(1.1);
-  mix-blend-mode: multiply;
-}
-
-/* Alternative: if multiply doesn't work, try screen blend mode */
-@media (prefers-color-scheme: dark) {
-  .logo-container img {
-    mix-blend-mode: screen;
-    filter: invert(1) contrast(1.2) brightness(1.1);
-  }
 }
