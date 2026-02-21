@@ -4,7 +4,7 @@
 -- Executive Committee
 INSERT INTO choir_members (name, gender, category, role, committee_name, display_order) VALUES
 ('Otsile Mpitseng', 'Male', 'committee', 'Chairperson', 'Executive Committee', 1),
-('Kebabetswe Diphofu', 'Female', 'committee', 'Deputy Chair', 'Executive Committee', 2),
+('Keabetswe Diphofu', 'Female', 'committee', 'Deputy Chair', 'Executive Committee', 2),
 ('Ofentse Dithato', 'Male', 'committee', 'Treasurer', 'Executive Committee', 3),
 ('Abaleng Mogono', 'Female', 'committee', 'Secretary', 'Executive Committee', 4),
 ('Orebotse Tshukudu', 'Female', 'committee', 'Deputy Sec', 'Executive Committee', 5),

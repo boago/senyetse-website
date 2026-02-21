@@ -1,3 +1,7 @@
+'use client';
+
+import { useState } from 'react';
+
 type MemberCardProps = {
   id: string;
   name: string;
@@ -12,12 +16,19 @@ type MemberCardProps = {
 
 export default function MemberCard({ member }: { member: MemberCardProps }) {
   const displayName = member.preferred_name || member.name;
+  const [imgError, setImgError] = useState(false);
+  const showImg = member.photo_url && !imgError;
   return (
     <article className="bg-white rounded-xl shadow-md overflow-hidden border border-senyetse-gold/20 text-center">
       <div className="aspect-square relative bg-senyetse-cream">
-        {member.photo_url ? (
+        {showImg ? (
           /* eslint-disable-next-line @next/next/no-img-element */
-          <img src={member.photo_url} alt={displayName} className="object-cover w-full h-full" />
+          <img
+            src={member.photo_url!}
+            alt={displayName}
+            className="object-cover w-full h-full"
+            onError={() => setImgError(true)}
+          />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-senyetse-earth/30 text-4xl font-display">
             {displayName.charAt(0)}
