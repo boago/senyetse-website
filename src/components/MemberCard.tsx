@@ -49,7 +49,7 @@ export default function MemberCard({ member }: { member: MemberCardProps }) {
           {member.gender && (
             <p className="text-senyetse-earth/70">Gender: {member.gender}</p>
           )}
-          {member.voice_category && (
+          {member.voice_category && member.category !== 'committee' && (
             <p className="text-senyetse-gold font-medium">Voice: {member.voice_category}</p>
           )}
         </div>
