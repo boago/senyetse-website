@@ -26,7 +26,7 @@ export default function MemberCard({ member }: { member: MemberCardProps }) {
           <img
             src={member.photo_url!}
             alt={displayName}
-            className="object-cover w-full h-full"
+            className="object-cover object-top w-full h-full"
             onError={() => setImgError(true)}
           />
         ) : (
